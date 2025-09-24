@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js" integrity="sha512-5Z0p6rQHq+1h7cL3u6q8U5k+Xp3r5H5v6k8U5k+X5p3r5H5v6k8U5k+X5p3r5H5v6
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <title>code editor</title>
+    </head>
+    <body>
+      <header>
+        <h1>Code Editor</h1>
+        <div class="container-row">
+          <div class="brand">
+            <div class="logo"></div>
+            <div class="title">Code Editor</div>
+          </div>
+          <div class="row">
+            <button class="btn-secondary" id="saveBtn" title="Save work locally">Save</button>
+            <button class="btn-secondary" id="loadBtn" title="Load work file">Load</button>
+            <input id="openFile" type="file" accept="application/json" />
+          </div>
+          
+          
+        </header>
+        <main>
+          <aside class="card-panel-stack">
+            <h2>Task / Assignment</h2>
+            <textarea id="assignment" class="text" placeholder="Enter your task or assignment details here..."></textarea>
+            <div class="stack">
+              <label for="testArea">Validation Tests (JavaScript only - optional) </label>
+              
+              
+              <section> 
+              
+              
+              <button class="tab" role="tab" aria-selected="false" data-pane="cssPanel" id="cssTab" tabindex="-1">
+                CSS
+              </button>
+            <button class="tab" role="tab" aria-selected="false" data-pane="js" id="jsTab" tabindex="-1">JS</button>
+            
+            <button class="tab" role="tab" aria-selected="true" data-pane="html" id="htmlTab" tabindex="0">
+              HTML
+          </button>
+        </div>
+        <div class="editor-wrap" data-pane="html">
+          <div id="ed_html" class="editor"></div>
+          </div>
+          <div class="editor-wrap" class="data-pane=css" hidden>
+            <div id="ed_css" class="editor"></div>
+            <div class="editor-wrap" data-pane="js" hidden></div>
+            <div id="ed_js" class="editor"></div>
+          </div>
+          <div class="stack">
+            <h3>Preview</h3>
+            <iframe id="preview" class="preview" sandbox="allow-scripts allow-same-origin allow-modals"></iframe>
+            </div>
+            
+          </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
